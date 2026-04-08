@@ -1,6 +1,7 @@
 export const C = {
  bg: "#020617",
  card: "rgba(15,23,42,0.6)",
+ input: "rgba(15,23,42,0.8)",
  blue: "#3b82f6",
  cyan: "#06b6d4",
  indigo: "#6366f1",
