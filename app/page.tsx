@@ -364,6 +364,7 @@ export default function Home() {
  <a href="#how" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Hoe werkt het</a>
  <a href="#features" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Features</a>
  <a href="#pricing" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Prijzen</a>
+ <a href="/over-ons" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Over ons</a>
  <a href="/login" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>API Docs</a>
  </div>
  <div>
