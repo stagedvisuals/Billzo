@@ -25,10 +25,7 @@ export async function updateSession(request: NextRequest) {
  }
  );
 
- const {
- data: { user },
- } = await supabase.auth.getUser();
-
+ const { data: { user } } = await supabase.auth.getUser();
  const path = request.nextUrl.pathname;
  const protectedRoutes = ["/dashboard", "/convert", "/admin"];
  const authRoutes = ["/login", "/register"];
@@ -44,6 +41,20 @@ export async function updateSession(request: NextRequest) {
  const url = request.nextUrl.clone();
  url.pathname = "/dashboard";
  return NextResponse.redirect(url);
+ }
+
+ if (user && protectedRoutes.some((r) => path.startsWith(r)) && !path.startsWith("/onboarding")) {
+ const { data: profile } = await supabase
+ .from("user_profiles")
+ .select("onboarding_complete")
+ .eq("id", user.id)
+ .single();
+
+ if (profile && !profile.onboarding_complete) {
+ const url = request.nextUrl.clone();
+ url.pathname = "/onboarding";
+ return NextResponse.redirect(url);
+ }
  }
 
  return supabaseResponse;

@@ -13,6 +13,11 @@ export default async function DashboardPage() {
  .eq("id", user.id)
  .single();
 
+ // Redirect to onboarding if not complete
+ if (profile && !profile.onboarding_complete) {
+ redirect("/onboarding");
+ }
+
  const { data: conversions } = await supabase
  .from("conversions")
  .select("*")
