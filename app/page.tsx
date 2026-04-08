@@ -49,9 +49,9 @@ export default function Home() {
  <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 60 }}>
  <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
  <div style={{ width: 32, height: 32, borderRadius: 10, background: `linear-gradient(135deg, ${C.blue}, ${C.indigo})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
- <span style={{ color: "#fff", fontSize: 14, fontWeight: 800 }}>B</span>
+ <span style={{ color: "#fff", fontSize: 14, fontWeight: 800 }}>P</span>
  </div>
- <span style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.3px" }}>Bill<span style={{ color: C.blue }}>zo</span></span>
+ <span style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.3px" }}>Peppol<span style={{ color: C.blue }}>Pro</span></span>
  </div>
 
  {/* Desktop nav */}
@@ -287,7 +287,7 @@ export default function Home() {
  Klaar om te{" "}
  <span style={{ background: `linear-gradient(135deg, ${C.blue}, ${C.cyan})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>starten</span>?
  </h2>
- <p style={{ fontSize: 17, color: C.dim, marginBottom: 32 }}>Probeer Billzo gratis. 3 facturen per maand, geen creditcard nodig.</p>
+ <p style={{ fontSize: 17, color: C.dim, marginBottom: 32 }}>Probeer PeppolPro gratis. 3 facturen per maand, geen creditcard nodig.</p>
  <Button primary text="Start gratis →" />
  </div>
  </Reveal>
@@ -300,9 +300,9 @@ export default function Home() {
  <div>
  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
  <div style={{ width: 28, height: 28, borderRadius: 8, background: `linear-gradient(135deg, ${C.blue}, ${C.indigo})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
- <span style={{ color: "#fff", fontSize: 12, fontWeight: 800 }}>B</span>
+ <span style={{ color: "#fff", fontSize: 12, fontWeight: 800 }}>P</span>
  </div>
- <span style={{ fontSize: 15, fontWeight: 800 }}>Bill<span style={{ color: C.blue }}>zo</span></span>
+ <span style={{ fontSize: 15, fontWeight: 800 }}>Peppol<span style={{ color: C.blue }}>Pro</span></span>
  </div>
  <p style={{ fontSize: 13, color: `${C.dim}88`, lineHeight: 1.6, maxWidth: 260 }}>Van PDF naar Peppol in seconden. Een product van SynqLayer.</p>
  </div>
@@ -320,7 +320,7 @@ export default function Home() {
  </div>
  </div>
  <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 20, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
- <span style={{ fontSize: 11, color: `${C.dim}55` }}>© 2026 Billzo — SynqLayer. Alle rechten voorbehouden.</span>
+ <span style={{ fontSize: 11, color: `${C.dim}55` }}>© 2026 PeppolPro — SynqLayer. Alle rechten voorbehouden.</span>
  <span style={{ fontSize: 11, color: `${C.dim}55` }}>KvK: [VOLGT] | BTW: [VOLGT]</span>
  </div>
  </div>
