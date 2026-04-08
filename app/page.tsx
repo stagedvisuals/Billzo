@@ -17,11 +17,6 @@ export default function Home() {
  return () => window.removeEventListener("scroll", s);
  }, []);
 
- const go = (id: string) => {
- document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
- setMenuOpen(false);
- };
-
  const navs = [
  { id: "how", l: "Hoe werkt het" },
  { id: "features", l: "Features" },
@@ -47,19 +42,19 @@ export default function Home() {
  transition: "all 0.4s",
  }}>
  <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 60 }}>
- <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+ <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", textDecoration: "none" }}>
  <div style={{ width: 32, height: 32, borderRadius: 10, background: `linear-gradient(135deg, ${C.blue}, ${C.indigo})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
  <span style={{ color: "#fff", fontSize: 14, fontWeight: 800 }}>P</span>
  </div>
  <span style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.3px" }}>Peppol<span style={{ color: C.blue }}>Pro</span></span>
- </div>
+ </a>
 
  {/* Desktop nav */}
  <div style={{ display: "flex", alignItems: "center", gap: 28 }} className="desk-nav">
  {navs.map((n) => (
- <button
+ <a
  key={n.id}
- onClick={() => go(n.id)}
+ href={`#${n.id}`}
  style={{
  background: "none",
  border: "none",
@@ -70,12 +65,13 @@ export default function Home() {
  fontFamily: "inherit",
  transition: "color 0.2s",
  padding: "6px 0",
+ textDecoration: "none",
  }}
  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#fff")}
  onMouseLeave={(e) => ((e.target as HTMLElement).style.color = C.dim)}
  >
  {n.l}
- </button>
+ </a>
  ))}
  <LinkBtn href="/login" text="Probeer gratis" />
  </div>
@@ -91,9 +87,10 @@ export default function Home() {
  {menuOpen && (
  <div style={{ padding: "12px 0 20px", borderTop: `1px solid ${C.border}` }}>
  {navs.map((n) => (
- <button
+ <a
  key={n.id}
- onClick={() => go(n.id)}
+ href={`#${n.id}`}
+ onClick={() => setMenuOpen(false)}
  style={{
  display: "block",
  width: "100%",
@@ -105,10 +102,11 @@ export default function Home() {
  padding: "10px 0",
  cursor: "pointer",
  fontFamily: "inherit",
+ textDecoration: "none",
  }}
  >
  {n.l}
- </button>
+ </a>
  ))}
  </div>
  )}
