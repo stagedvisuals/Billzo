@@ -3,7 +3,6 @@ import { useState, useEffect, ReactNode } from "react";
 import ParticleField from "../components/ParticleField";
 import Reveal from "../components/Reveal";
 import GlassCard from "../components/GlassCard";
-import LinkBtn from "../components/LinkBtn";
 import Divider from "../components/Divider";
 import { C, STEPS, FEATURES, PRICING, FAQ } from "../lib/constants";
 
@@ -73,7 +72,17 @@ export default function Home() {
  {n.l}
  </a>
  ))}
- <LinkBtn href="/login" text="Probeer gratis" />
+ <a href="/login" style={{
+ display: "inline-block",
+ background: "linear-gradient(135deg, #3b82f6, #6366f1)",
+ color: "#fff",
+ fontWeight: 600,
+ fontSize: 15,
+ padding: "14px 32px",
+ borderRadius: 12,
+ textDecoration: "none",
+ boxShadow: "0 8px 32px rgba(59,130,246,0.25)",
+ }}>Probeer gratis</a>
  </div>
 
  <button
@@ -108,6 +117,20 @@ export default function Home() {
  {n.l}
  </a>
  ))}
+ <a href="/login" onClick={() => setMenuOpen(false)} style={{
+ display: "block",
+ width: "100%",
+ textAlign: "center",
+ background: "linear-gradient(135deg, #3b82f6, #6366f1)",
+ color: "#fff",
+ fontWeight: 600,
+ fontSize: 15,
+ padding: "14px 0",
+ borderRadius: 12,
+ textDecoration: "none",
+ boxShadow: "0 8px 32px rgba(59,130,246,0.25)",
+ marginTop: "12px",
+ }}>Probeer gratis</a>
  </div>
  )}
  </nav>
@@ -137,8 +160,27 @@ export default function Home() {
  </Reveal>
  <Reveal delay={0.3}>
  <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
- <LinkBtn href="/login" text="Probeer gratis — 3 facturen/maand →" />
- <LinkBtn href="#how" text="Bekijk hoe het werkt ↓" primary={false} />
+ <a href="/login" style={{
+ display: "inline-block",
+ background: "linear-gradient(135deg, #3b82f6, #6366f1)",
+ color: "#fff",
+ fontWeight: 600,
+ fontSize: 15,
+ padding: "14px 32px",
+ borderRadius: 12,
+ textDecoration: "none",
+ boxShadow: "0 8px 32px rgba(59,130,246,0.25)",
+ }}>Probeer gratis — 3 facturen/maand →</a>
+ <a href="#how" style={{
+ display: "inline-block",
+ border: "1px solid rgba(255,255,255,0.1)",
+ color: "#94a3b8",
+ fontWeight: 600,
+ fontSize: 15,
+ padding: "14px 32px",
+ borderRadius: 12,
+ textDecoration: "none",
+ }}>Bekijk hoe het werkt ↓</a>
  </div>
  </Reveal>
  <Reveal delay={0.4}>
@@ -289,7 +331,17 @@ export default function Home() {
  <span style={{ background: `linear-gradient(135deg, ${C.blue}, ${C.cyan})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>starten</span>?
  </h2>
  <p style={{ fontSize: 17, color: C.dim, marginBottom: 32 }}>Probeer PeppolPro gratis. 3 facturen per maand, geen creditcard nodig.</p>
- <LinkBtn href="/login" text="Start gratis →" />
+ <a href="/login" style={{
+ display: "inline-block",
+ background: "linear-gradient(135deg, #3b82f6, #6366f1)",
+ color: "#fff",
+ fontWeight: 600,
+ fontSize: 15,
+ padding: "14px 32px",
+ borderRadius: 12,
+ textDecoration: "none",
+ boxShadow: "0 8px 32px rgba(59,130,246,0.25)",
+ }}>Start gratis →</a>
  </div>
  </Reveal>
  </section>
