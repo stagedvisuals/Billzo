@@ -3,7 +3,7 @@ import { useState, useEffect, ReactNode } from "react";
 import ParticleField from "../components/ParticleField";
 import Reveal from "../components/Reveal";
 import GlassCard from "../components/GlassCard";
-import Button from "../components/Button";
+import LinkBtn from "../components/LinkBtn";
 import Divider from "../components/Divider";
 import { C, STEPS, FEATURES, PRICING, FAQ } from "../lib/constants";
 
@@ -77,7 +77,7 @@ export default function Home() {
  {n.l}
  </button>
  ))}
- <Button primary text="Probeer gratis" />
+ <LinkBtn href="/login" text="Probeer gratis" />
  </div>
 
  <button
@@ -139,8 +139,8 @@ export default function Home() {
  </Reveal>
  <Reveal delay={0.3}>
  <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
- <Button primary text="Probeer gratis — 3 facturen/maand →" />
- <Button primary={false} text="Bekijk hoe het werkt ↓" onClick={() => go("how")} />
+ <LinkBtn href="/login" text="Probeer gratis — 3 facturen/maand →" />
+ <LinkBtn href="#how" text="Bekijk hoe het werkt ↓" primary={false} />
  </div>
  </Reveal>
  <Reveal delay={0.4}>
@@ -233,7 +233,8 @@ export default function Home() {
  </div>
  ))}
  </div>
- <button style={{
+ <a href="/login" style={{
+ display: "block",
  width: "100%",
  padding: "13px 0",
  borderRadius: 10,
@@ -245,9 +246,11 @@ export default function Home() {
  cursor: "pointer",
  fontFamily: "inherit",
  transition: "all 0.2s",
+ textDecoration: "none",
+ textAlign: "center" as const,
  }}>
  {p.cta}
- </button>
+ </a>
  </GlassCard>
  ))}
  </div>
@@ -288,7 +291,7 @@ export default function Home() {
  <span style={{ background: `linear-gradient(135deg, ${C.blue}, ${C.cyan})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>starten</span>?
  </h2>
  <p style={{ fontSize: 17, color: C.dim, marginBottom: 32 }}>Probeer PeppolPro gratis. 3 facturen per maand, geen creditcard nodig.</p>
- <Button primary text="Start gratis →" />
+ <LinkBtn href="/login" text="Start gratis →" />
  </div>
  </Reveal>
  </section>
