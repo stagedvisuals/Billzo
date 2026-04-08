@@ -361,18 +361,26 @@ export default function Home() {
  </div>
  <div>
  <div style={{ fontSize: 10, fontWeight: 700, color: C.dim, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Product</div>
- <a href="#how" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Hoe werkt het</a>
- <a href="#features" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Features</a>
- <a href="#pricing" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Prijzen</a>
- <a href="/over-ons" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Over ons</a>
- <a href="/login" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>API Docs</a>
+ {[
+  { label: "Hoe werkt het", href: "#how" },
+  { label: "Features", href: "#features" },
+  { label: "Prijzen", href: "#pricing" },
+  { label: "Over ons", href: "/over-ons" },
+  { label: "API Docs", href: "/contact" },
+ ].map((l) => (
+  <a key={l.label} href={l.href} style={{ display: "block", fontSize: 13, color: "rgba(71,85,105,0.53)", padding: "3px 0", textDecoration: "none" }}>{l.label}</a>
+ ))}
  </div>
  <div>
  <div style={{ fontSize: 10, fontWeight: 700, color: C.dim, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12 }}>Juridisch</div>
- <a href="/privacy" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Privacy</a>
- <a href="/voorwaarden" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Voorwaarden</a>
- <a href="/avg-gdpr" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>AVG/GDPR</a>
- <a href="/contact" style={{ fontSize: 13, color: `${C.dim}88`, padding: "3px 0", textDecoration: "none", display: "block" }}>Contact</a>
+ {[
+  { label: "Privacy", href: "/privacy" },
+  { label: "Voorwaarden", href: "/voorwaarden" },
+  { label: "AVG/GDPR", href: "/privacy" },
+  { label: "Contact", href: "/contact" },
+ ].map((l) => (
+  <a key={l.label} href={l.href} style={{ display: "block", fontSize: 13, color: "rgba(71,85,105,0.53)", padding: "3px 0", textDecoration: "none" }}>{l.label}</a>
+ ))}
  </div>
  </div>
  <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 20, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
